@@ -11,7 +11,7 @@
                     <th>Exam Name</th>
                     {{-- <th>No Qns</th> --}}
                     <th>Time</th>
-                    <th>Total Mark</th>
+                    {{-- <th>Total Mark</th> --}}
                     <th>Last updated_by</th>
                     <th>manage</th>
                 </tr>
@@ -29,7 +29,7 @@
                         <td><a href="{{ url('continue-make-exam/'.$exam->id) }}">{{ $exam->title }}</a></td>
                         {{-- <td>{{ $exam->total_qns }}</td> --}}
                         <td>{{ $exam->muda }}</td>
-                        <td>{{ $exam->marks }}</td>
+                        {{-- <td>{{ $exam->marks }}</td> --}}
                         <td>{{ $updated_by }}</td>
                         <td>
                           <a href="{{ url('continue-make-exam/'.$exam->id) }}" class="btn btn-info">view</a>
