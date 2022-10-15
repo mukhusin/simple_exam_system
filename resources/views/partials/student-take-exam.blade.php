@@ -1,13 +1,16 @@
 
+
+
+<div class="row mb-3 alert alert-info" style="color: black">
+    {!! $exam->passage !!}
+</div>
+
 <div class="alert alert-info">
     <h4><b>{{ $exam->title }}</b></h4>
     <h5>Weight each Qn: {{ $exam->weight_each }} </h5>
     <p>{{ $exam->description }}</p>
 </div>
 
-<div class="row mb-3 alert alert-info" style="color: black">
-    {!! $exam->passage !!}
-</div>
 <div class="">
     @php
         $qn_no = 1;
