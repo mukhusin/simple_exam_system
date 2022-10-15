@@ -18,6 +18,7 @@ return new class extends Migration
             $table->double('from_marks');
             $table->double('to_marks');
             $table->string('grade');
+            $table->string('remark');
             $table->foreignId('updated_by')->nullable()->constrained('users')->onUpdate('cascade')->onDelete('set null');
             $table->timestamps();
         });

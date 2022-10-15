@@ -1,7 +1,11 @@
 @extends('layouts.app')
 
 @section('contents')
-   
+   @if ($result)
+       @include('partials.student-result')
+   @else
+      @include('partials.student-take-exam')
+   @endif
 @endsection
 
 @section('javascript')

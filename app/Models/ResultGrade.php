@@ -14,6 +14,8 @@ class ResultGrade extends Model
         'from_marks',
         'to_marks',
         'grade',
+        'remark',
+        'updated_by',
     ];
 
 }

@@ -33,7 +33,8 @@
                         <td>{{ $updated_by }}</td>
                         <td>
                           <a href="{{ url('continue-make-exam/'.$exam->id) }}" class="btn btn-info">view</a>
-                          <button data-bs-toggle="modal" data-bs-target="#delete-exam{{$item->id}}-modal" class="btn btn-danger">delete</button>
+                          <a href="{{ url('student-exam-results/'.$exam->id) }}" class="btn btn-success">results</a>
+                          <button data-bs-toggle="modal" data-bs-target="#delete-exam{{$exam->id}}-modal" class="btn btn-danger">delete</button>
                         </td>
                     </tr>
                 @endforeach
@@ -45,10 +46,10 @@
 @foreach ($exams as $item)
 <div class="modal fade" id="delete-exam{{$item->id}}-modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
 aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog modal-lg">
+<div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Add new Exam</h5>
+            <h5 class="modal-title" id="staticBackdropLabel">Delete Exam</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -62,12 +63,12 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                  </div>
                  <div class="form-group">
                     <label for="">Enter Your Password</label>
-                    <input type="password" name="password" class="form->control">
+                    <input type="password" name="password" class="form-control">
                  </div>
                 <div class="row mt-3">
-                    <div class="col-md-3"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Cancel</button></div>
+                    <div class="col-md-3"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">cancel</button></div>
                     <div class="col-md-3"></div>
-                    <div class="col-md-6"><button class="btn btn-primary w-100">Delete</button></div>
+                    <div class="col-md-6"><button class="btn btn-danger w-100">Delete</button></div>
                 </div>
             </form>
 

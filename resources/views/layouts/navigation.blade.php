@@ -32,7 +32,7 @@
                 </button>
             </div>
 
-            @if (Auth::user()->role == "teacher")
+            {{-- @if (Auth::user()->role == "teacher")
                 <div class="dropdown d-inline-block">
                     <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="fa fa-2x fa-bell"></i> <span class="badge bg-danger rounded-pill">{{ $newDoneExam }}</span> </button>
                     <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0" aria-labelledby="page-header-notifications-dropdown">
@@ -40,7 +40,7 @@
                             <div class="row align-items-center">
                                 <div class="col">
                                     <h5 class="m-0 font-size-16"> Notifications </h5> </div>
-                                {{-- <div class="col-auto"> <a href="#!" class="small"> Mark all as read</a> </div> --}}
+                                <div class="col-auto"> <a href="#!" class="small"> Mark all as read</a> </div>
                             </div>
                         </div>
                         <div data-simplebar style="max-height: 230px;">
@@ -51,7 +51,7 @@
                                             <h6 class="mb-1">Exam Notifications</h6>
                                             <div class="font-size-12 text-muted">
                                                 <p class="mb-1"><b>{{ $newDoneExam }}</b> New done exam</p>
-                                                {{-- <p class="mb-0 text-danger"></p> --}}
+                                                <p class="mb-0 text-danger"></p>
                                             </div>
                                         </div>
                                     </div>
@@ -61,13 +61,13 @@
                         
                         </div>
                         <div class="p-2 border-top">
-                            {{-- <div class="d-grid">
+                            <div class="d-grid">
                                 <a class="btn btn-sm btn-link font-size-14 text-center" href="javascript:void(0)"> <i class="uil-arrow-circle-right me-1"></i> View More.. </a>
-                            </div> --}}
+                            </div>
                         </div>
                     </div>
                 </div>
-            @endif
+            @endif --}}
 
             <div class="dropdown d-inline-block">
                 <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
@@ -110,8 +110,8 @@
                         @if (Auth::user()->role == "teacher")
 
                             <li class="nav-item">
-                                <a class="nav-link" href="/exams">
-                                    Exams
+                                <a class="nav-link" href="/grade">
+                                    Grades
                                 </a>
                             </li>
 
@@ -147,7 +147,7 @@
 <div class="modal fade" id="logout-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
-        <div class="modal-header bg-success">
+        <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
@@ -156,7 +156,7 @@
           <form action="{{ route('logout') }}" method="post">
             @csrf
             {{-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> --}}
-            <button type="submit" class="btn btn-danger w-25 mt-3">ok</button>
+            <button type="submit" class="btn btn-danger w-25 mt-3">Logout</button>
           </form>
         </div>
         <div class="modal-footer">
