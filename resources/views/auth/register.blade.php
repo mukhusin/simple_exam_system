@@ -177,7 +177,7 @@
                     $('.UserregisterButton').removeClass('disabled');
                     $("#user-register-form")[0].reset();
                     toastr.success(data.success);
-                    location.reload();
+                    window.location.href = "/login";
                 }
             }
         });
