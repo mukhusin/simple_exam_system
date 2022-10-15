@@ -102,7 +102,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <input type="number" min="1" max="20" name="total_qns" class="form-control" autofocus autocomplete="false" required>
                         </div> --}}
                         <div class="form-group col-md-6">
-                            <label for="title">Weight Each:</label>
+                            <label for="title">Weight for Each Question:</label>
                             <input type="number" min="1" max="100" name="weight_each" class="form-control" autofocus autocomplete="false" required>
                         </div>
                         <div class="form-group col-md-6">
