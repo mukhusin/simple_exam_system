@@ -34,6 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/grade', [PageController::class, 'grade']);
     Route::get('/dashboard', [PageController::class, 'dashboard']);
     Route::post('/exam-manage', [ExamController::class, 'exam_manage'])->name('exam-manage');
+    Route::post('/get-pdf-doc', [ExamController::class, 'pdf_result'])->name('get-pdf-doc');
     Route::get('/exam-result-pdf/{exam_id}', [ExamController::class, 'resultPdf'])->name('exam-result-pdf');
     Route::get('/continue-make-exam/{exam_id}', [ExamController::class, 'continue_make_exam'])->name('continue-make-exam');
 

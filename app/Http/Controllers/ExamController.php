@@ -9,6 +9,7 @@ use App\Models\ResultGrade;
 use App\Models\StudentMarkedQuestion;
 use Barryvdh\DomPDF\Facade\Pdf;
 use Brian2694\Toastr\Facades\Toastr;
+use Carbon\Carbon;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -82,6 +83,21 @@ class ExamController extends Controller
     public function resultPdf($exam_id){
         $exam = Exam::find($exam_id);
         $results = ExamResult::where('exam_id', $exam->id)->get();
+        $name = auth()->user()->name;
+        $pdf = Pdf::loadView('pdf.exam-result', [
+            'results' => $results,
+            'name' => $name,
+            'exam' => $exam,
+        ]);
+    
+        return  $pdf->stream(now() . 'results.pdf');
+       }
+
+    public function pdf_result(Request $request){
+        $startDate = Carbon::createFromFormat('Y-m-d', $request->from)->startOfDay();
+        $endDate = Carbon::createFromFormat('Y-m-d', $request->to)->endOfDay();
+        $exam = Exam::find($request->exam_id);
+        $results = ExamResult::where('exam_id', $exam->id)->whereBetween('created_at', [$startDate, $endDate])->get();
         $name = auth()->user()->name;
         $pdf = Pdf::loadView('pdf.exam-result', [
             'results' => $results,
