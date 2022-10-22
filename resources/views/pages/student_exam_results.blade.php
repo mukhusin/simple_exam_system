@@ -8,6 +8,9 @@
 </div>
     <div class="row">
         <div class="col-md-12">
+            @if (count($results) > 0)
+            <a href="{{ url('exam-result-pdf/'.$exam->id) }}" class="btn btn-info mb-3">Generate PDF</a>
+            @endif
             <table id="datatable" class="table table-bordered dt-responsive nowrap"
                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                 <thead>

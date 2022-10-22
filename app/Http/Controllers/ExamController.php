@@ -7,6 +7,7 @@ use App\Models\ExamResult;
 use App\Models\MultipleChoiceQuestion;
 use App\Models\ResultGrade;
 use App\Models\StudentMarkedQuestion;
+use Barryvdh\DomPDF\Facade\Pdf;
 use Brian2694\Toastr\Facades\Toastr;
 use Exception;
 use Illuminate\Http\Request;
@@ -77,6 +78,19 @@ class ExamController extends Controller
             return redirect()->back();
         }
     }
+
+    public function resultPdf($exam_id){
+        $exam = Exam::find($exam_id);
+        $results = ExamResult::where('exam_id', $exam->id)->get();
+        $name = auth()->user()->name;
+        $pdf = Pdf::loadView('pdf.exam-result', [
+            'results' => $results,
+            'name' => $name,
+            'exam' => $exam,
+        ]);
+    
+        return  $pdf->stream(now() . 'results.pdf');
+       }
 
     public function submit_exam($request){
         $questions = MultipleChoiceQuestion::where('exam_id', $request->exam_id)->get();
