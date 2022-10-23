@@ -8,11 +8,11 @@
             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
             <thead>
                 <tr>
-                    <th>Exam Name</th>
+                    <th>Jina la mtihani</th>
                     {{-- <th>No Qns</th> --}}
-                    <th>Time</th>
+                    <th>Muda</th>
                     {{-- <th>Total Mark</th> --}}
-                    <th>Last updated_by</th>
+                    <th>imehaririwa na</th>
                     <th>manage</th>
                 </tr>
             </thead>
@@ -32,8 +32,8 @@
                         {{-- <td>{{ $exam->marks }}</td> --}}
                         <td>{{ $updated_by }}</td>
                         <td>
-                          <a href="{{ url('continue-make-exam/'.$exam->id) }}" class="btn btn-info">view</a>
-                          <a href="{{ url('student-exam-results/'.$exam->id) }}" class="btn btn-success">results</a>
+                          <a href="{{ url('continue-make-exam/'.$exam->id) }}" class="btn btn-info">Angalia</a>
+                          <a href="{{ url('student-exam-results/'.$exam->id) }}" class="btn btn-success">Matokeo</a>
                           <button data-bs-toggle="modal" data-bs-target="#delete-exam{{$exam->id}}-modal" class="btn btn-danger">delete</button>
                         </td>
                     </tr>
@@ -49,7 +49,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Delete Exam</h5>
+            <h5 class="modal-title" id="staticBackdropLabel">Futa Mtihani</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -59,16 +59,16 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <input type="hidden" name="exam_id" value="{{$item->id}}" hidden class="form-control">
                  <p>{{$item->title}}</p>
                  <div class="alert alert-danger">
-                    <strong>Are you sure you need to delete this Exam</strong>
+                    <strong>Unauhakika unahitaji kufuta huu mtihani?</strong>
                  </div>
                  <div class="form-group">
-                    <label for="">Enter Your Password</label>
+                    <label for="">Ingiza Nywira</label>
                     <input type="password" name="password" class="form-control">
                  </div>
                 <div class="row mt-3">
-                    <div class="col-md-3"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">cancel</button></div>
+                    <div class="col-md-3"><button type="button" class="btn btn-primary" data-bs-dismiss="modal">hgairi</button></div>
                     <div class="col-md-3"></div>
-                    <div class="col-md-6"><button class="btn btn-danger w-100">Delete</button></div>
+                    <div class="col-md-6"><button class="btn btn-danger w-100">Ndio Futa</button></div>
                 </div>
             </form>
 
@@ -85,7 +85,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Add new Exam</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Ongeza mtihani Mpya</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -94,7 +94,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                     <input type="hidden" name="mode" value="add_exam" hidden class="form-control">
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label for="title">Exam Name:</label>
+                            <label for="title">Jina la Mtihani:</label>
                             <input type="text" name="title" class="form-control" autofocus autocomplete="false" required>
                         </div>
                         {{-- <div class="form-group col-md-6">
@@ -102,18 +102,18 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
                             <input type="number" min="1" max="20" name="total_qns" class="form-control" autofocus autocomplete="false" required>
                         </div> --}}
                         <div class="form-group col-md-6">
-                            <label for="title">Weight for Each Question:</label>
+                            <label for="title">Alama ya kila swali:</label>
                             <input type="number" min="1" max="100" name="weight_each" class="form-control" autofocus autocomplete="false" required>
                         </div>
                         <div class="form-group col-md-6">
-                            <label for="title">Time in Minutes:</label>
+                            <label for="title">Muda:</label>
                             <input type="number" min="1" max="120" name="muda" class="form-control" autofocus autocomplete="false" required>
                         </div>
                        
                     </div>
 
                     <div class="form-group">
-                        <label for="title">Instruction:</label>
+                        <label for="title">Maelekezo:</label>
                         <textarea name="description" class="form-control"></textarea>
                     </div>
 
@@ -121,7 +121,7 @@ aria-labelledby="staticBackdropLabel" aria-hidden="true">
 
                     <div class="row mt-3">
                         <div class="col-md-3"></div>
-                        <div class="col-md-6"><button class="btn btn-primary w-100">continue</button></div>
+                        <div class="col-md-6"><button class="btn btn-primary w-100">endelea</button></div>
                         <div class="col-md-3"></div>
                     </div>
                 </form>

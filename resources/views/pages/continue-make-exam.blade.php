@@ -1,11 +1,11 @@
 @extends('layouts.app')
 
 @section('contents')
-    <h4>Making Exam</h4>
+    <h4>Tunga Mtihani</h4>
 
     <div class="alert alert-info">
         <h4><b>{{ $exam->title }}</b></h4>  
-        <h5>Weight each Qn: {{$exam->weight_each}} Time of Exam: {{$exam->muda}} <small><i>minutes</i></small></h5>
+        <h5>Alama ya Kila swali: {{$exam->weight_each}} </h5>
         <p>{{ $exam->description }}</p>
         <div class="row">
             <div class="col-md-4"></div>
@@ -26,10 +26,10 @@
             <input type="hidden" name="mode" value="update_passege" hidden class="form-control">
             <input type="hidden" name="exam_id" value="{{$exam->id}}" hidden class="form-control">
         <div class="form-group">
-            <label for="passage">Write Notes</label>
+            <label for="passage">Andika Maelezo</label>
             <textarea name="passage" class="form-control text-editor">{!! $exam->passage !!}</textarea>
             <div class="row justify-content-end">
-                <button data-bs-toggle="modal" data-bs-target="#add-question-modal" class="btn btn-primary w-70 mt-2">Save Notes </button>
+                <button data-bs-toggle="modal" data-bs-target="#add-question-modal" class="btn btn-primary w-70 mt-2">Hifadhi Maelezo</button>
             </div>
         </div>
        </form>
@@ -63,12 +63,12 @@
                 <div class="col-md-10"><h5>{{$question->option_d}}</h5></div>
                </div>
                <div class="row ">
-                  <div class="col-md-3">Answer: <b>{{strtoupper($question->answer)}}</b></div>
+                  <div class="col-md-3">Jibu ni: <b>{{strtoupper($question->answer)}}</b></div>
                   <div class="col-md-5">
-                    <button data-bs-toggle="modal" data-bs-target="#update-question{{$question->id}}-modal" class="btn btn-warning w-50 mt-3">Edit question <i class="fa fa-edit"></i></button>
+                    <button data-bs-toggle="modal" data-bs-target="#update-question{{$question->id}}-modal" class="btn btn-warning w-50 mt-3">Hariri Swali <i class="fa fa-edit"></i></button>
                   </div>
                    <div class="col-md-4">
-                    <button data-bs-toggle="modal" data-bs-target="#delete-question{{$question->id}}-modal" class="btn btn-danger w-50 mt-3">Delete question <i class="fa fa-trash"></i></button>
+                    <button data-bs-toggle="modal" data-bs-target="#delete-question{{$question->id}}-modal" class="btn btn-danger w-50 mt-3">Futa Swali <i class="fa fa-trash"></i></button>
                   </div>
                </div>
             </div>
@@ -92,7 +92,7 @@
         <div class="modal-dialog modal-lg">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Edit Exam details</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Hariri taarifa za Mtihani</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -102,7 +102,7 @@
                         <input type="hidden" name="exam_id" value="{{$exam->id}}" hidden class="form-control">
                         <div class="row">
                             <div class="form-group col-md-6">
-                                <label for="title">Exam Name:</label>
+                                <label for="title">Jina la Mtihani:</label>
                                 <input type="text" name="title" value="{{$exam->title}}" class="form-control" autofocus autocomplete="false" required>
                             </div>
                             {{-- <div class="form-group col-md-6">
@@ -110,18 +110,18 @@
                                 <input type="number" min="1" max="20" name="total_qns" value="{{$exam->total_qns}}" class="form-control" autofocus autocomplete="false" required>
                             </div> --}}
                             <div class="form-group col-md-6">
-                                <label for="title">Weight for Each Question:</label>
+                                <label for="title">Alama kwa kila swali:</label>
                                 <input type="number" min="1" max="100" name="weight_each" value="{{$exam->weight_each}}" class="form-control" autofocus autocomplete="false" required>
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="title">Time in Minutes:</label>
+                                <label for="title">Muda kwa Dakika:</label>
                                 <input type="number" min="1" max="120" name="muda" value="{{$exam->muda}}" class="form-control" autofocus autocomplete="false" required>
                             </div>
                            
                         </div>
 
                         <div class="form-group col-md-6">
-                            <label for="title">Instruction:</label>
+                            <label for="title">Maelekezo:</label>
                             <textarea name="description" class="form-control">{{$exam->description}}</textarea>
                         </div>
 
@@ -144,7 +144,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Activate or Deactivate Exam Form</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Ruhusu au zuia Mtihani kufanyika</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -158,14 +158,14 @@
                           <input type="hidden" name="activate" value="1" hidden class="form-control">
                         @endif
                         <div class="form-control">
-                            <label for="">Enter Your Password below</label>
+                            <label for="">Andika Nywira yako</label>
                             <input type="password" name="password" class="form-control">
                         </div>
                         <div class="message"></div>
 
                         <div class="row mt-3">
                             <div class="col-md-3"></div>
-                            <div class="col-md-6"><button type="submit" class="btn btn-primary w-100">submit</button></div>
+                            <div class="col-md-6"><button type="submit" class="btn btn-primary w-100">Hifadhi</button></div>
                             <div class="col-md-3"></div>
                         </div>
                     </form>
@@ -182,7 +182,7 @@
     <div class="modal-dialog modal-xl">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Add question Form</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Fomu ya kuongeza swali</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -191,9 +191,9 @@
                     <input type="hidden" name="mode" value="update_question" hidden class="form-control">
                     <input type="hidden" name="question_id" value="{{$qsn->id}}" hidden class="form-control">
                     <input type="hidden" name="exam_id" value="{{$exam->id}}" hidden class="form-control">
-                    <h4 class="m-3">Write Questions</h4>
+                    <h4 class="m-3">Andaa maswali</h4>
                     <div class="form-group">
-                        <label for="question">Question</label>
+                        <label for="question">Swali</label>
                         <textarea name="question" class="form-control">{{$qsn->question}}</textarea>
                     </div>
                     <div class="row mt-3 mb-3">
@@ -222,7 +222,7 @@
                     </div>
                     <div class="row">
                         <div class="col-md-2"></div>
-                        <div class="col-md-2"><label for="">Select Collect Answer</label></div>
+                        <div class="col-md-2"><label for="">Chagua Jibu sahihi</label></div>
                         <div class="col-md-2">
                             <div class="form-group">
                                 
@@ -253,7 +253,7 @@
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Add new Exam</h5>
+                <h5 class="modal-title" id="staticBackdropLabel">Ongeza Mtihani Mpya</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -263,16 +263,16 @@
                     <input type="hidden" name="question_id" value="{{$qsn->id}}" hidden class="form-control">
                      <p>{{$qsn->question}}</p>
                      <div class="alert alert-danger">
-                        <strong>Are you sure you need to delete this question</strong>
+                        <strong>Unauhakika unataka kufuta swali</strong>
                      </div>
                      <div class="form-group">
-                        <label for="">Enter Your Password</label>
+                        <label for="">Weka Nywira</label>
                         <input type="password" name="password" class="form->control">
                      </div>
                     <div class="row mt-3">
-                        <div class="col-md-3"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Cancel</button></div>
+                        <div class="col-md-3"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">Ghairi</button></div>
                         <div class="col-md-3"></div>
-                        <div class="col-md-6"><button class="btn btn-primary w-100">Delete</button></div>
+                        <div class="col-md-6"><button class="btn btn-primary w-100">Futa</button></div>
                     </div>
                 </form>
 
@@ -289,7 +289,7 @@
         <div class="modal-dialog modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add question Form</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Fomu ya kuongeza swali</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -297,9 +297,9 @@
                         @csrf
                         <input type="hidden" name="mode" value="add_question" hidden class="form-control">
                         <input type="hidden" name="exam_id" value="{{$exam->id}}" hidden class="form-control">
-                        <h4 class="m-3">Write Questions</h4>
+                        <h4 class="m-3">Andaa Maswali</h4>
                         <div class="form-group">
-                            <label for="question">Question</label>
+                            <label for="question">Swali</label>
                             <textarea name="question" class="form-control"></textarea>
                         </div>
                         <div class="row mt-3 mb-3">
@@ -328,7 +328,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-2"></div>
-                            <div class="col-md-2"><label for="">Select Collect Answer</label></div>
+                            <div class="col-md-2"><label for="">Chagua Jibu sahihi</label></div>
                             <div class="col-md-2">
                                 <div class="form-group">
                                     
@@ -343,7 +343,7 @@
                         </div>
                         <div class="row">
                             <div class="col-md-4"></div>
-                            <div class="col-md-4"><button type="submit" class="btn btn-primary w-100 m-3">save question</button></div>
+                            <div class="col-md-4"><button type="submit" class="btn btn-primary w-100 m-3">Hifadhi swali</button></div>
                             <div class="col-md-4"></div>
                         </div>
                     </form>
