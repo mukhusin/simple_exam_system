@@ -28,8 +28,8 @@
                 <!-- Main Menu Starts -->
                 <ul class="nav navbar-nav" id="main-navigation">
                     <li class="active"><a href="/"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="/register">Register</a></li>
-                    <li><a href="/login">Login</a></li>
+                    <li><a href="/register">Jisajiri</a></li>
+                    <li><a href="/login">Ingia</a></li>
                 </ul>
                 <!-- Main Menu Ends -->
             </div>

@@ -5,11 +5,11 @@
             style="border-collapse: collapse; border-spacing: 0; width: 100%;">
             <thead>
                 <tr>
-                    <th>Exam Name</th>
+                    <th>Jina lamtihani</th>
                     {{-- <th>No Qns</th> --}}
-                    <th>Time</th>
-                    <th>Total Mark</th>
-                    <th>action</th>
+                    <th>Muda</th>
+                    <th>Jumla ya alama</th>
+                    <th></th>
                 </tr>
             </thead>
 
@@ -24,7 +24,7 @@
                         <td>{{ $exam->muda }}</td>
                         <td>{{ $exam->marks }}</td>
                         <td>
-                           <a href="{{ url('student-exam/'.$exam->id) }}" class="btn btn-primary">View test</a>
+                           <a href="{{ url('student-exam/'.$exam->id) }}" class="btn btn-primary">Fungua mtihani</a>
                         </td>
                     </tr>
                 @endforeach

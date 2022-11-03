@@ -102,8 +102,8 @@
                         <!-- Input Field Ends -->
                         <!-- Submit Form Button Starts -->
                         <div class="form-group">
-                            <button class="custom-button UserregisterButton" type="submit">create account</button>
-                            <p class="text-center">already have an account ? <a href="/login">Login</a>
+                            <button class="custom-button UserregisterButton" type="submit">jisajiri</button>
+                            <p class="text-center">tayari umesajiriwa ? <a href="/login">ingia</a>
                         </div>
                         <!-- Submit Form Button Ends -->
                     </form>

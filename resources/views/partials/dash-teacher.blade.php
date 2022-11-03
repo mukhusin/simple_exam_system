@@ -8,11 +8,11 @@
                 style="border-collapse: collapse; border-spacing: 0; width: 100%;">
                 <thead>
                     <tr>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Email</th>
+                        <th>Jina la mtumiaji</th>
+                        <th>Namba ya Sim</th>
+                        <th>Barua pepe</th>
                         <th>Role</th>
-                        <th>manage</th>
+                        <th>hariri</th>
                     </tr>
                 </thead>
 
@@ -31,7 +31,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="staticBackdropLabel">Add new Exam</h5>
+                    <h5 class="modal-title" id="staticBackdropLabel">Ongeza mtumiaji mpya</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -39,22 +39,22 @@
                         @csrf
                         <input type="hidden" name="mode" value="userAdd" hidden class="form-control">
                         <div class="form-group">
-                            <label for="password">Full name:</label>
+                            <label for="password">Jina:</label>
                             <input type="text" name="name" class="form-control" autofocus autocomplete="false" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Phone:</label>
+                            <label for="password">Namba ya sim:</label>
                             <input type="text" name="phone" class="form-control" autofocus autocomplete="false" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Email:</label>
+                            <label for="password">Barua pepe:</label>
                             <input type="email" name="email" class="form-control" autofocus autocomplete="false" required>
                         </div>
                         
                         <div class="form-group">
                             <label for="role">Role:</label>
                             <select name="role" id="" class="form-control">
-                                <option value="">........select.......</option>
+                                <option value="">........chagua.......</option>
                                 <option value="admin">Admin</option>
                                 <option value="teacher">Teacher</option>
                                 <option value="student">student</option>
@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="cpassword">Confirm password:</label>
+                            <label for="cpassword">Hakiki password:</label>
                             <input name="password_confirmation" autocomplete="new-password" type="password" minlenght="8"
                                 class="form-control reg-input" id="password-confirm" required>
                         </div>
@@ -78,8 +78,7 @@
 
                         <div class="row mt-3">
                             <div class="col-md-3"></div>
-                            <div class="col-md-6"><button class="btn btn-primary UserregisterButton">save
-                                    details</button></div>
+                            <div class="col-md-6"><button class="btn btn-primary UserregisterButton">tunza taarifa</button></div>
                             <div class="col-md-3"></div>
                         </div>
                     </form>

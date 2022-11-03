@@ -7,7 +7,7 @@
 
 <div class="alert alert-info">
     <h4><b>{{ $exam->title }}</b></h4>
-    <h5>Weight each Qn: {{ $exam->weight_each }} </h5>
+    <h5>Alama ya kila swali: {{ $exam->weight_each }} </h5>
     <p>{{ $exam->description }}</p>
 </div>
 
@@ -56,7 +56,7 @@
                 <div class="col-md-4">
                    <div class="form-group">
                     <select name="answer{{$question->id}}" class="form-control">
-                        <option value="">select correct answer</option>
+                        <option value="">chagua jibu sahihi</option>
                         <option value="a">A</option>
                         <option value="b">B</option>
                         <option value="c">C</option>
@@ -78,7 +78,7 @@
 
     <div class="row">
         <div class="col-md-4"></div>
-        <div class="col-md-4"><button type="submit" class="btn btn-primary w-100 mb-5">submit exam</button></div>
+        <div class="col-md-4"><button type="submit" class="btn btn-primary w-100 mb-5">kusanya mtihani</button></div>
         <div class="col-md-4"></div>
     </div>
 

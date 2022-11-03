@@ -68,8 +68,8 @@
                 <div>
                     <!-- Main Heading Starts -->
                     <div class="text-center top-text">
-                        <h1><span>member</span> login</h1>
-                        <p>great to have you back!</p>
+                        <h1><span>umesajiriwa</span> ingia</h1>
+                        <p>karibu tena!</p>
                     </div>
                     <div class="text-center top-text">
                         <x-auth-session-status class="mb-4 text-danger" :status="session('status')" />
@@ -97,8 +97,8 @@
                         <!-- Input Field Ends -->
                         <!-- Submit Form Button Starts -->
                         <div class="form-group">
-                            <button class="custom-button login" type="submit">login</button>
-                            <p class="text-center">don't have an account ? <a href="/register">register now</a>
+                            <button class="custom-button login" type="submit">ingia</button>
+                            <p class="text-center">haujajisari ? <a href="/register">jisajiri sasa</a>
                         </div>
                         <!-- Submit Form Button Ends -->
                     </form>

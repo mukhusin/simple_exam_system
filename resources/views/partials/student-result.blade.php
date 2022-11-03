@@ -1,16 +1,16 @@
 
 <div class="alert alert-info">
     <h4><b>{{ $exam->title }}</b></h4>
-    <span> Date submitted <i> {{$result->created_at->format('d F Y H:i:s')}} </i> </span>
+    <span> Umekusanywa tarehe <i> {{$result->created_at->format('d F Y H:i:s')}} </i> </span>
     <h5>Weight each Qn: {{ $exam->weight_each }} </h5>
     <p>{{ $exam->description }}</p>
 </div>
 
 <div class="alert alert-primary">
     <div class="row">
-        <div class="col-md-4">Score: <b>{{$result->score}}%</b></div>
-        <div class="col-md-4">Grade: <b>{{$result->grade}}</b></div>
-        <div class="col-md-4">Remark: <b>{{$result->remark}}</b></div>
+        <div class="col-md-4">Alama: <b>{{$result->score}}%</b></div>
+        <div class="col-md-4">Daraja: <b>{{$result->grade}}</b></div>
+        <div class="col-md-4">Hali: <b>{{$result->remark}}</b></div>
     </div>
 </div>
 <div class="row mb-3 alert alert-info" style="color: black">
@@ -65,7 +65,7 @@
                     @if ($answered->isCorrect)
                         <b>{{strtoupper($answered->answer)}}</b>  <i class="fa fa-2x fa-check text-success"></i>
                     @else
-                       <b>{{strtoupper($answered->answer)}}</b>  <i class="text-danger font-size-24"><b>X</b></i> correct answer is: {{strtoupper($question->answer)}}
+                       <b>{{strtoupper($answered->answer)}}</b>  <i class="text-danger font-size-24"><b>X</b></i> jibu sahihi ni: {{strtoupper($question->answer)}}
                     @endif
                 </div>
             </div>

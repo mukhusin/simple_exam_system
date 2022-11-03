@@ -3,13 +3,13 @@
 @section('contents')
 <div class="alert alert-info">
     <h4><b>{{ $exam->title }}</b></h4>
-    <h5>Weight each Qn: {{ $exam->weight_each }} </h5>
+    <h5>Alama ya kila swali: {{ $exam->weight_each }} </h5>
     {{-- <p>{{ $exam->description }}</p> --}}
 </div>
     <div class="row">
         <div class="col-md-12">
             @if (count($results) > 0)
-            <a href="{{ url('exam-result-pdf/'.$exam->id) }}" target="_blank" rel="noopener noreferrer" class="btn btn-info mb-3">Generate PDF</a>
+            <a href="{{ url('exam-result-pdf/'.$exam->id) }}" target="_blank" rel="noopener noreferrer" class="btn btn-info mb-3">Pakua PDF</a>
             <a href="#" data-bs-toggle="modal" data-bs-target="#generate_pdf_doc_modal" class="btn btn-secondary mb-3">Generate PDF Per date Range</a>
             @endif
             <table id="datatable" class="table table-bordered dt-responsive nowrap"
